@@ -29,7 +29,7 @@ jobs:
         run: |
           git clone https://github.com/immortalwrt/immortalwrt.git
           cd immortalwrt
-          git checkout openwrt-23.05
+          git checkout openwrt-24.10.1
 
       - name: Copy custom .config
         run: |
