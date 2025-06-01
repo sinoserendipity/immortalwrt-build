@@ -27,7 +27,7 @@ jobs:
 
       - name: Clone ImmortalWrt source
         run: |
-          git clone https://github.com/immortalwrt/immortalwrt.git
+          git clone -b v24.10.1 --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt
           cd immortalwrt
           git checkout openwrt-24.10.1
 
