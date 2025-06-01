@@ -29,8 +29,7 @@ jobs:
         run: |
           git clone -b v24.10.1 --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt
           cd immortalwrt
-          git checkout openwrt-24.10.1
-
+          
       - name: Copy custom .config
         run: |
           cp .config immortalwrt/.config
