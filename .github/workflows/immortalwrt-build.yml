@@ -25,10 +25,13 @@ jobs:
           libncursesw5-dev libssl-dev python3 python3-pip python3-ply \
           python3-pyelftools unzip wget xsltproc zlib1g-dev
 
-      - name: Clone ImmortalWrt source
+      - name: Clone ImmortalWrt source & copy lucky tailscal adguardhome 应用
         run: |
           git clone -b v24.10.1 --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt
           cd immortalwrt
+          git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+          git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
+          git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
           
       - name: Copy custom .config
         run: |
